@@ -7359,6 +7359,14 @@
         modules_flsModules.watcher = new ScrollWatcher({});
         let addWindowScrollEvent = false;
         function headerScroll() {
+            function changeLogoPath() {
+                const svgLogo = document.querySelector(".svg-logo-light-dims use");
+                svgLogo.setAttribute("xlink:href", "img/icons/icons.svg#logo-1");
+            }
+            function changeLogoPathBack() {
+                const svgLogo = document.querySelector(".svg-logo-light-dims use");
+                svgLogo.setAttribute("xlink:href", "img/icons/icons.svg#logo-light");
+            }
             addWindowScrollEvent = true;
             const header = document.querySelector("header.header");
             const headerShow = header.hasAttribute("data-scroll-show");
@@ -7369,6 +7377,15 @@
             document.addEventListener("windowScroll", (function(e) {
                 const scrollTop = window.scrollY;
                 clearTimeout(timer);
+                console.log(header.classList.contains("_header-scroll"));
+                if (header.classList.contains("_header-scroll")) {
+                    changeLogoPath();
+                    console.log("test1");
+                }
+                if (!header.classList.contains("_header-scroll")) {
+                    changeLogoPathBack();
+                    console.log("test2");
+                }
                 if (scrollTop >= startPoint) {
                     !header.classList.contains("_header-scroll") ? header.classList.add("_header-scroll") : null;
                     if (headerShow) {

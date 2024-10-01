@@ -9,6 +9,14 @@
     }
 }
 
+.svg-m1-dims { width: 21px; height: 28px; }
+ .svg-m2-dims { width: 29px; height: 29px; }
+ .svg-m3-dims { width: 25px; height: 28px; }
+ .svg-m4-dims { width: 35px; height: 26px; }
+ .svg-m5-dims { width: 32px; height: 25px; }
+ .svg-phone-dims{width: 16px; height: 16px;}
+ .svg-logo-light-dims{width: 140px; height: 44px;}
+
 .main {
     padding-top: 94px;
     color: #fff;
@@ -82,6 +90,11 @@
 
     &__icon {
         margin-bottom: 20px;
+        color: $main;
+        // font-size: 12px;
+        // svg{
+        //     max-width: 30px;
+        // }
     }
 
     /* .main__text */

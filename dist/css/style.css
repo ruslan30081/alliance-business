@@ -345,7 +345,11 @@ p {
   color: #000;
   top: 0;
   -webkit-animation: scroll .7s ease-in-out 0s 1 normal;
-  animation: scroll .7s ease-in-out 0s 1 normal
+  animation: scroll .7s ease-in-out 0s 1 normal;
+  border-bottom: none
+}
+.header._header-scroll .header__logo {
+  --xlink: href: url(../img/icons/icons.svg#logo)
 }
 .header._header-scroll .header__btn {
   color: #fff
@@ -401,6 +405,34 @@ p {
   position: relative;
   margin-top: -94px
 }
+.svg-m1-dims {
+  width: 21px;
+  height: 28px
+}
+.svg-m2-dims {
+  width: 29px;
+  height: 29px
+}
+.svg-m3-dims {
+  width: 25px;
+  height: 28px
+}
+.svg-m4-dims {
+  width: 35px;
+  height: 26px
+}
+.svg-m5-dims {
+  width: 32px;
+  height: 25px
+}
+.svg-phone-dims {
+  width: 16px;
+  height: 16px
+}
+.svg-logo-light-dims {
+  width: 140px;
+  height: 44px
+}
 .main {
   padding-top: 94px;
   color: #fff
@@ -448,7 +480,8 @@ p {
   padding: 34px 50px 30px 50px
 }
 .main__icon {
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  color: #5c8ee5
 }
 .step__title {
   margin-top: 150px;

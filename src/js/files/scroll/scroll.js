@@ -86,6 +86,15 @@ export function pageNavigation() {
 }
 // Работа с шапкой при скроле
 export function headerScroll() {
+	function changeLogoPath() {
+		const svgLogo = document.querySelector('.svg-logo-light-dims use');
+		svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-1');
+	  }
+	  function changeLogoPathBack() {
+		const svgLogo = document.querySelector('.svg-logo-light-dims use');
+		svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-light');
+	  }
+
 	addWindowScrollEvent = true;
 	const header = document.querySelector('header.header');
 	const headerShow = header.hasAttribute('data-scroll-show');
@@ -96,12 +105,25 @@ export function headerScroll() {
 	document.addEventListener("windowScroll", function (e) {
 		const scrollTop = window.scrollY;
 		clearTimeout(timer);
+		console.log(header.classList.contains('_header-scroll'));
+			if (header.classList.contains('_header-scroll')) {
+				changeLogoPath();
+				console.log('test1');
+
+			}
+			if (!header.classList.contains('_header-scroll')) {
+				changeLogoPathBack();
+				console.log('test2');
+			}
 		if (scrollTop >= startPoint) {
 			!header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;
+			
+
 			if (headerShow) {
 				if (scrollTop > scrollDirection) {
 					// downscroll code
 					header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+
 				} else {
 					// upscroll code
 					!header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
@@ -112,8 +134,11 @@ export function headerScroll() {
 			}
 		} else {
 			header.classList.contains('_header-scroll') ? header.classList.remove('_header-scroll') : null;
+			
+
 			if (headerShow) {
 				header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+
 			}
 		}
 		scrollDirection = scrollTop <= 0 ? 0 : scrollTop;

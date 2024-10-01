@@ -1,9 +1,9 @@
-
 @keyframes scroll {
     0% {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
     }
+
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -23,7 +23,13 @@
         color: #000;
         top: 0;
         animation: scroll .7s ease-in-out 0s 1 normal;
-        .header__btn{
+        border-bottom: none;
+
+        .header__logo {
+            --xlink:href: url(@img/icons/icons.svg#logo);
+        }
+
+        .header__btn {
             color: #fff;
         }
 
@@ -32,12 +38,10 @@
         }
     }
 
-    
-   
 
-    &._header-show {
-       
-    }
+
+
+    &._header-show {}
 
     /* .header__menu */
     color: #fff;
