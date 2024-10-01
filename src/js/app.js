@@ -212,7 +212,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Функциональность добавления классов в хеддер при прокрутке
 // Документация: https://start-template.ru/modul-dobavleniya-klassov-v-shapku-pri-prokrutke-straniczy-chertogi-frilansera-v3-0-0/
-// flsScroll.headerScroll();
+flsScroll.headerScroll();
 
 // Модуль анимация цифрового счетчика
 // Документация: https://start-template.ru/modul-animaczii-czifrovogo-schetchika/

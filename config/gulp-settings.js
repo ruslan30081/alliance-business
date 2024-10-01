@@ -32,15 +32,15 @@ export const pathtofiles = {
 	rootFolder: rootFolder,
 	srcFolder: srcFolder,
 	// Путь к нужной папке на удаленном сервере.
-	ftp: ``
+	ftp: `www/alliance-business.ru/`
 	//Пример: загрузить в папку 2022 далее в папку с названием проекта
 	// ftp: `2022/${rootFolder}`
 };
 
 // Настройка FTP соединения
 export const configFTP = {
-	host: "", // Адрес FTP сервера
-	user: "", // Имя пользователя
-	password: "", // Пароль
+	host: "31.31.196.97", // Адрес FTP сервера
+	user: "u1982558", // Имя пользователя
+	password: "Hv51EBiN4tj6uOCS", // Пароль
 	parallel: 5 // Кол-во одновременных потоков
 }

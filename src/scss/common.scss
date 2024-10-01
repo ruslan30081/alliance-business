@@ -16,7 +16,6 @@ h2 {
 }
 
 h3 {
-    font-family: "BebasNeueRegular", sans-serif;
     font-weight: 400;
     font-size: toRem(28);
     line-height: 120%;
@@ -75,18 +74,29 @@ p {
 }
 
 .line-small {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: $main;
+
+    font-size: toRem(16);
+    @include adaptiveValue("font-size",16 ,14 );
     &::before {
         content: '';
         width: 40px;
         height: 1px;
         background-color: $main;
         transition: all 0.3s;
+        margin-right: 20px;
     }
 
     @media (any-hover: hover) {
         &:hover {
-            width: 60px;
+            &::before {
+                content: '';
+                width: 60px;
 
+            }
         }
     }
 }
