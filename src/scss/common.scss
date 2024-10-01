@@ -1,1 +1,113 @@
 // Заголовки, общие БЄМ блоки и прочее...
+h1 {
+    font-family: "BebasNeueRegular", sans-serif;
+    font-weight: 400;
+    font-size: toRem(80);
+    line-height: 120%;
+    @include adaptiveValue("font-size", 80, 48);
+}
+
+h2 {
+    font-family: "BebasNeueRegular", sans-serif;
+    font-weight: 400;
+    font-size: toRem(60);
+    line-height: 120%;
+    @include adaptiveValue("font-size", 60, 36);
+}
+
+h3 {
+    font-family: "BebasNeueRegular", sans-serif;
+    font-weight: 400;
+    font-size: toRem(28);
+    line-height: 120%;
+    @include adaptiveValue("font-size", 28, 20);
+}
+
+p {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: toRem(16);
+    line-height: 160%;
+    @include adaptiveValue("font-size", 16, 14);
+}
+
+.text_p {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: toRem(16);
+    line-height: 160%;
+    @include adaptiveValue("font-size", 16, 14);
+}
+
+.bold {
+    font-family: "Noto Sans", sans-serif;
+    font-size: toRem(16);
+    line-height: 160%;
+    font-weight: 600;
+
+    @media (max-width:$tablet) {
+        font-weight: 700;
+    }
+
+    @include adaptiveValue("font-size", 16, 14);
+}
+
+
+//========================================================================================================================================================
+
+.sub-line-title {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        content: '';
+        background-color: $main;
+        width: 150px;
+        height: 2px;
+
+        @media (max-width:$mobile) {
+            margin-top: -20px;
+            width: 100px;
+        }
+    }
+}
+
+.line-small {
+    &::before {
+        content: '';
+        width: 40px;
+        height: 1px;
+        background-color: $main;
+        transition: all 0.3s;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            width: 60px;
+
+        }
+    }
+}
+
+.sep_opacity {
+    background-color: #EBEBF0;
+    opacity: 20%;
+}
+
+.btn {
+    padding: 25px 60px;
+    display: inline-block;
+    background-color: $main;
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #3A71D1;
+        }
+    }
+
+}

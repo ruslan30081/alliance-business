@@ -1,0 +1,103 @@
+.header {
+    /* .header__menu */
+    color: #fff;
+    height: 94px;
+    border-bottom: 1px solid $sep_op;
+z-index: 1;
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* .header__col */
+
+    &__col {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    /* .header__logo */
+
+    &__logo {
+        padding: 0 50px;
+
+    }
+
+    /* .header__phone */
+
+    &__phone {
+        margin-right: 50px;
+
+        img {
+            margin-right: 14px;
+        }
+    }
+
+    /* .header__phone-link */
+
+    &__phone-link {}
+
+    /* .header__btn */
+
+    &__btn {
+        background-color: $main;
+        padding: 34px 50px;
+        height: 100%;
+        font-weight: 700;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #3A71D1;
+            }
+        }
+    }
+}
+
+.menu {
+    height: 100%;
+
+    /* .menu__icon */
+
+    &__icon {}
+
+
+    /* .menu__line */
+
+    &__line {
+        margin-right: 50px;
+        background-color: $sep_op;
+        width: 1px;
+        height: 100%;
+    }
+
+    /* .menu__body */
+
+    &__body {}
+
+    /* .menu__list */
+
+    &__list {
+        display: flex;
+
+    }
+
+    /* .menu__item */
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+
+    /* .menu__link */
+
+    &__link {}
+}
+
+.icon-menu {}

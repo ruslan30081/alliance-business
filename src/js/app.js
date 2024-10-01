@@ -32,11 +32,11 @@ import * as flsFunctions from "./files/functions.js";
 /* (i) необходимо для корректного отображения webp из css  */
 // flsFunctions.isWebp();
 /* Добавление класса touch для HTML если браузер мобильный */
-// flsFunctions.addTouchClass();
+flsFunctions.addTouchClass();
 /* Добавление loaded для HTML после полной загрузки страницы */
-// flsFunctions.addLoadedClass();
+flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
 
@@ -94,7 +94,7 @@ import * as flsFunctions from "./files/functions.js";
 Документация: https://start-template.ru/modul-popup-vytekayushhie-modalnye-okna-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль анимации (параллакс) объектов во время движения мыши
@@ -139,7 +139,7 @@ flsForms.formFieldsInit({
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /*
@@ -168,7 +168,7 @@ flsForms.formFieldsInit({
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
@@ -191,7 +191,7 @@ flsForms.formFieldsInit({
 // Наблюдатель объектов с атрибутом data-watch
 // Документация: https://start-template.ru/modul-nablyudatel-po-poyavleniyu-elementov-pri-prokrutke-straniczy-skrolle-chertogi-frilansera-v3-0-0/
 // Сниппет(HTML):
-// import './libs/watcher.js'
+import './libs/watcher.js'
 
 // / / Модуль по экранной прокрутке
 // Документация: https://start-template.ru/modul-ekrannoj-prokrutki-straniczy-fullpage-chertogi-frilansera-v3-0-0/

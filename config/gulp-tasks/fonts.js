@@ -1,3 +1,4 @@
+import { log } from 'console';
 import fs from 'fs';
 import fonter from 'gulp-fonter-fix';
 import ttf2woff2 from 'gulp-ttf2woff2';
@@ -54,6 +55,8 @@ export const woff2Copy = () => {
 }
 export const fontsStyle = () => {
 	let fontsFile = `${app.path.srcFolder}/scss/fonts/fonts.scss`;
+	console.log('----------------------------------------------------------------------------------------------------------');
+	console.log(fontsFile);
 	// Если передан флаг --rewrite удаляем файл подключения шрифтов
 	app.isFontsReW ? fs.unlink(fontsFile, cb) : null;
 	// Проверяем существуют ли файлы шрифтов
