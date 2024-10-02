@@ -365,6 +365,11 @@ summary::marker {
   animation: scroll .7s ease-in-out 0s 1 normal;
   border-bottom: none
 }
+.header._header-scroll .menu__icon span,
+.header._header-scroll .menu__icon::after,
+.header._header-scroll .menu__icon::before {
+  background-color: #000!important
+}
 .header._header-scroll .header__btn {
   color: #fff
 }
@@ -525,6 +530,10 @@ summary::marker {
   width: 16px;
   height: 16px
 }
+.svg-arrow-dims {
+  width: 1.9375rem;
+  height: 1rem
+}
 .svg-logo-light-dims {
   width: 140px;
   height: 44px
@@ -579,20 +588,50 @@ summary::marker {
   margin-bottom: 20px;
   color: #5c8ee5
 }
+.main__wrap-arrows {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid hsla(240,14%,93%,.2)
+}
+.main__wrap-arrows button {
+  padding: 14px 0;
+  width: 50%
+}
+.main__wrap-arrows button:nth-child(1) {
+  border-right: 1px solid hsla(240,14%,93%,.2)
+}
 .step__title {
   margin-top: 180px;
   margin-bottom: 50px
 }
 .step__body {
-  display: flex
+  display: flex;
+  width: 100%
+}
+.step__slider {
+  width: 100%
+}
+.step .step__slide {
+  counter-increment: item;
+  min-height: 0;
+  min-width: 0;
+  max-width: 330px;
+  width: 100%
+}
+.step__wrap-arrows {
+  display: flex;
+  justify-content: flex-end
+}
+.step__wrap-arrows button {
+  padding: 14px 17px;
+  background-color: #5c8ee5
 }
 .step__item {
   width: 100%;
-  max-width: 330px;
-  counter-increment: item
+  max-width: 330px
 }
-.step__item:not(:last-child) {
-  margin-right: 30px
+.step__wrapper {
+  width: 100%
 }
 .step__wrap {
   display: flex;
@@ -653,6 +692,14 @@ summary::marker {
 }
 .swiper-button-lock {
   display: none!important
+}
+@media (min-width:47.99875em) {
+  .main__wrap-arrows {
+    display: none
+  }
+  .step .swiper-initialized .swiper-slide {
+    flex-shrink: 1
+  }
 }
 @media (min-width:61.99875em) {
   .menu__footer {
@@ -748,6 +795,16 @@ summary::marker {
   }
   .svg-logo-light-dims {
     width: 7rem
+  }
+  .main__bg {
+    height: 100%;
+    top: 0
+  }
+  .main__bg img {
+    height: 100%
+  }
+  .main__item {
+    padding: 20px 30px
   }
 }
 @media (max-width:65.3125em) {
@@ -856,6 +913,9 @@ summary::marker {
   .menu-open .menu__list {
     font-weight: 700
   }
+  .main__title {
+    margin-top: 200px
+  }
 }
 @media (max-width:61.99875em)and (any-hover:none) {
   .icon-menu {
@@ -864,8 +924,51 @@ summary::marker {
 }
 @media (max-width:47.99875em) {
   .sub-line-title::before {
-    margin-top: -20px;
+    top: -20px;
     width: 100px
+  }
+  .main__btn {
+    margin-bottom: 70px
+  }
+  .main__wrapper {
+    height: 140px!important
+  }
+  .main__slide {
+    height: 100%
+  }
+  .main__item {
+    height: 100%
+  }
+  .step__title {
+    margin-top: 150px
+  }
+  .step .step__slide {
+    max-width: 300px;
+    width: 100%
+  }
+  .step__wrap {
+    margin-bottom: 10px
+  }
+}
+@media (max-width:29.99875em) {
+  .btn {
+    padding: 20px 0;
+    width: 100%;
+    text-align: center
+  }
+  .main__title {
+    margin-top: 133px;
+    margin-bottom: 10px
+  }
+  .main__subtitle {
+    margin-bottom: 30px
+  }
+  .main__btn {
+    margin-bottom: 50px
+  }
+  .step__title {
+    margin-top: 122px;
+    margin-bottom: 30px
   }
 }
 @media (min-width:20em)and (max-width:91.875em) {

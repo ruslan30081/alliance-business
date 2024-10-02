@@ -456,46 +456,47 @@ export function tabs() {
 export function menuInit() {
 	let isIconMenuClicked = false;
 	let isIconMenuLocked = false;
-
+  
 	function changeLogoPath() {
-		const svgLogo = document.querySelector('.svg-logo-light-dims use');
-		svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-1');
+	  const svgLogo = document.querySelector('.svg-logo-light-dims use');
+	  svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-1');
 	}
-
+  
 	function changeLogoPathBack() {
-		const svgLogo = document.querySelector('.svg-logo-light-dims use');
-		svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-light');
+	  const svgLogo = document.querySelector('.svg-logo-light-dims use');
+	  svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-light');
 	}
-
+  
 	function handleIconMenuClick() {
-		if (!isIconMenuLocked) {
-			if (!isIconMenuClicked) {
-				changeLogoPath();
-				isIconMenuClicked = true;
-			} else {
-				changeLogoPathBack();
-				isIconMenuClicked = false;
-			}
-			isIconMenuLocked = true;
-			setTimeout(() => {
-				isIconMenuLocked = false;
-			}, 500);
+	  if (!isIconMenuLocked) {
+		if (!isIconMenuClicked) {
+		  changeLogoPath();
+		  isIconMenuClicked = true;
+		} else {
+		  if (!document.querySelector('header').classList.contains('_header-scroll')) {
+			changeLogoPathBack();
+		  }
+		  isIconMenuClicked = false;
 		}
+		isIconMenuLocked = true;
+		setTimeout(() => {
+		  isIconMenuLocked = false;
+		}, 500);
+	  }
 	}
-
+  
 	const iconMenuButton = document.querySelector('.icon-menu');
 	iconMenuButton.addEventListener('click', handleIconMenuClick);
-
+  
 	if (document.querySelector(".icon-menu")) {
-		document.addEventListener("click", function (e) {
-			if (bodyLockStatus && e.target.closest('.icon-menu')) {
-				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-open");
-
-			}
-		});
+	  document.addEventListener("click", function (e) {
+		if (bodyLockStatus && e.target.closest('.icon-menu')) {
+		  bodyLockToggle();
+		  document.documentElement.classList.toggle("menu-open");
+		}
+	  });
 	};
-}
+  }
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add("menu-open");

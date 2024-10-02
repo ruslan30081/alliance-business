@@ -4035,7 +4035,7 @@
                         changeLogoPath();
                         isIconMenuClicked = true;
                     } else {
-                        changeLogoPathBack();
+                        if (!document.querySelector("header").classList.contains("_header-scroll")) changeLogoPathBack();
                         isIconMenuClicked = false;
                     }
                     isIconMenuLocked = true;
@@ -7491,6 +7491,55 @@
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next"
                 },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    479: {
+                        slidesPerView: 2,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    605: {
+                        slidesPerView: 2.4,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    }
+                },
+                on: {}
+            });
+            if (document.querySelector(".swiper-step")) new swiper_core_Swiper(".swiper-step", {
+                modules: [ Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                speed: 800,
+                navigation: {
+                    prevEl: ".step-prev",
+                    nextEl: ".step-next"
+                },
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1.5,
+                        spaceBetween: 30
+                    },
+                    479: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    768: {
+                        spaceBetween: 30,
+                        enabled: false
+                    }
+                },
                 on: {}
             });
         }
@@ -7619,7 +7668,6 @@
             document.addEventListener("windowScroll", (function(e) {
                 const scrollTop = window.scrollY;
                 clearTimeout(timer);
-                console.log(header.classList.contains("_header-scroll"));
                 if (header.classList.contains("_header-scroll")) changeLogoPath();
                 if (!header.classList.contains("_header-scroll")) changeLogoPathBack();
                 if (scrollTop >= startPoint) {

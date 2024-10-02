@@ -8,7 +8,9 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import {
+	Navigation
+} from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -26,13 +28,13 @@ import "../../scss/base/swiper.scss";
 
 //Инициализация слайдеров
 function initSliders() {
-//Список слайдеров
-//Проверяем, есть ли слайдер на странице
+	//Список слайдеров
+	//Проверяем, есть ли слайдер на странице
 	if (document.querySelector('.swiper')) { //Указываем класс нужного слайдера
-//Создаем слайдер
+		//Создаем слайдер
 		new Swiper('.swiper', { //Указываем класс нужного слайдера
-            //Подключаем модули слайдера
-            //для конкретного случая
+			//Подключаем модули слайдера
+			//для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
@@ -77,28 +79,90 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+
 			// Брейкпоинты
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
+				300: {
+					slidesPerView: 1.5,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				479: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				605: {
+					slidesPerView: 2.4,
 					spaceBetween: 0,
 					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					slidesPerView: 5,
+					spaceBetween: 0,
+					autoHeight: true,
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
+
+			},
+
+			// События
+			on: {
+
+			}
+		});
+	}
+	if (document.querySelector('.swiper-step')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.swiper-step', { //Указываем класс нужного слайдера
+			//Подключаем модули слайдера
+			//для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			//autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
 			},
 			*/
+
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.step-prev',
+				nextEl: '.step-next',
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1.5,
+					spaceBetween: 30,
+				},
+				479: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+				768: {
+					spaceBetween: 30,
+					enabled: false,
+				},
+
+			},
+
 			// События
 			on: {
 

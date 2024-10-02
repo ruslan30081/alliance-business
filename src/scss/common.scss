@@ -76,7 +76,7 @@ summary{
         height: 2px;
 
         @media (max-width:$mobile) {
-            margin-top: -20px;
+            top: -20px;
             width: 100px;
         }
     }
@@ -124,6 +124,12 @@ summary{
     color: #fff;
     transition: all 0.3s;
     cursor: pointer;
+    @media (max-width:$mobileSmall){
+         padding: 20px 0;
+         width: 100%;
+         text-align: center; 
+
+    }
 
     @media (any-hover: hover) {
         &:hover {

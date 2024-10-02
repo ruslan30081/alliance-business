@@ -105,7 +105,6 @@ export function headerScroll() {
 	document.addEventListener("windowScroll", function (e) {
 		const scrollTop = window.scrollY;
 		clearTimeout(timer);
-		console.log(header.classList.contains('_header-scroll'));
 			if (header.classList.contains('_header-scroll')) {
 				changeLogoPath();
 
