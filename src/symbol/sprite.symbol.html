@@ -125,6 +125,7 @@ They might well be outsourced to an external stylesheet of course.
  .svg-mail-dims { width: 16px; height: 12px; }
  .svg-map-dims { width: 12px; height: 17px; }
  .svg-phone-dims { width: 16px; height: 17px; }
+ .svg-phone-light-dims { width: 16px; height: 17px; }
  .svg-svg-dims { width: 16px; height: 16px; }
  .svg-vk-dims { width: 20px; height: 12px; }
 </style>
@@ -231,6 +232,9 @@ for further details on how to create this embeddable sprite variant.
 </symbol>
      <symbol viewBox="0 0 16 17" fill="none" id="phone" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.9688 12.0822L15.2188 15.2384C15.125 15.7072 14.75 16.0197 14.2812 16.0197C6.40625 15.9884 0 9.58218 0 1.70718C0 1.23843 0.28125 0.86343 0.75 0.76968L3.90625 0.0196803C4.34375 -0.0740697 4.8125 0.17593 5 0.58218L6.46875 3.98843C6.625 4.39468 6.53125 4.86343 6.1875 5.11343L4.5 6.48843C5.5625 8.64468 7.3125 10.3947 9.5 11.4572L10.875 9.76968C11.125 9.45718 11.5938 9.33218 12 9.48843L15.4062 10.9572C15.8125 11.1759 16.0625 11.6447 15.9688 12.0822Z" fill="#5C8EE6"/>
+</symbol>
+     <symbol viewBox="0 0 16 17" fill="none" id="phone-light" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.9688 12.0822L15.2188 15.2384C15.125 15.7072 14.75 16.0197 14.2812 16.0197C6.40625 15.9884 0 9.58218 0 1.70718C0 1.23843 0.28125 0.86343 0.75 0.76968L3.90625 0.0196803C4.34375 -0.0740697 4.8125 0.17593 5 0.58218L6.46875 3.98843C6.625 4.39468 6.53125 4.86343 6.1875 5.11343L4.5 6.48843C5.5625 8.64468 7.3125 10.3947 9.5 11.4572L10.875 9.76968C11.125 9.45718 11.5938 9.33218 12 9.48843L15.4062 10.9572C15.8125 11.1759 16.0625 11.6447 15.9688 12.0822Z" fill="white"/>
 </symbol>
      <symbol viewBox="0 0 16 16" fill="none" id="svg" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.44444 0C1.99378 0 0 1.99378 0 4.44444V11.5556C0 14.0062 1.99378 16 4.44444 16H11.5556C14.0062 16 16 14.0062 16 11.5556V4.44444C16 1.99378 14.0062 0 11.5556 0H4.44444ZM4.44444 1.77778H11.5556C13.0258 1.77778 14.2222 2.97422 14.2222 4.44444V11.5556C14.2222 13.0258 13.0258 14.2222 11.5556 14.2222H4.44444C2.97422 14.2222 1.77778 13.0258 1.77778 11.5556V4.44444C1.77778 2.97422 2.97422 1.77778 4.44444 1.77778ZM12.4444 2.66667C12.2087 2.66667 11.9826 2.76032 11.8159 2.92702C11.6492 3.09372 11.5556 3.31981 11.5556 3.55556C11.5556 3.7913 11.6492 4.0174 11.8159 4.18409C11.9826 4.35079 12.2087 4.44444 12.4444 4.44444C12.6802 4.44444 12.9063 4.35079 13.073 4.18409C13.2397 4.0174 13.3333 3.7913 13.3333 3.55556C13.3333 3.31981 13.2397 3.09372 13.073 2.92702C12.9063 2.76032 12.6802 2.66667 12.4444 2.66667ZM8 3.55556C5.54933 3.55556 3.55556 5.54933 3.55556 8C3.55556 10.4507 5.54933 12.4444 8 12.4444C10.4507 12.4444 12.4444 10.4507 12.4444 8C12.4444 5.54933 10.4507 3.55556 8 3.55556ZM8 5.33333C9.47022 5.33333 10.6667 6.52978 10.6667 8C10.6667 9.47022 9.47022 10.6667 8 10.6667C6.52978 10.6667 5.33333 9.47022 5.33333 8C5.33333 6.52978 6.52978 5.33333 8 5.33333Z" fill="#5C8EE6"/>
@@ -423,6 +427,14 @@ embedded above. They may be styled via CSS.
                         </svg>
                     </div>
                     <h2>phone, </h2>
+                </li>
+             <li title="phone-light">
+                    <div class="icon-box">
+                        <svg class="svg-phone-light-dims">
+                            <use xlink:href="#phone-light"/>
+                        </svg>
+                    </div>
+                    <h2>phone-light, </h2>
                 </li>
              <li title="svg">
                     <div class="icon-box">
@@ -619,6 +631,14 @@ SVG sprite. They may be styled via CSS.
                     </div>
                     <h2>phone</h2>
                 </li>
+             <li title="phone-light">
+                    <div class="icon-box">
+                        <svg class="svg-phone-light-dims">
+                            <use xlink:href="../img/icons/icons.svg#phone-light"/>
+                        </svg>
+                    </div>
+                    <h2>phone-light</h2>
+                </li>
              <li title="svg">
                     <div class="icon-box">
                         <svg class="svg-svg-dims">
@@ -643,7 +663,7 @@ SVG sprite. They may be styled via CSS.
 
         </section>
         <footer>
-            <p>Generated at Tue, 01 Oct 2024 16:49:22 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+            <p>Generated at Wed, 02 Oct 2024 10:09:48 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
         </footer>
     </body>
 </html>

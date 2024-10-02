@@ -108,12 +108,10 @@ export function headerScroll() {
 		console.log(header.classList.contains('_header-scroll'));
 			if (header.classList.contains('_header-scroll')) {
 				changeLogoPath();
-				console.log('test1');
 
 			}
 			if (!header.classList.contains('_header-scroll')) {
 				changeLogoPathBack();
-				console.log('test2');
 			}
 		if (scrollTop >= startPoint) {
 			!header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;

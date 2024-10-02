@@ -18,7 +18,7 @@ h2 {
 h3 {
     font-weight: 400;
     font-size: toRem(28);
-    line-height: 120%;
+    line-height: 145%;
     @include adaptiveValue("font-size", 28, 20);
 }
 
@@ -35,7 +35,9 @@ p {
     font-weight: 400;
     font-size: toRem(16);
     line-height: 160%;
-    @include adaptiveValue("font-size", 16, 14);
+    @media (max-width:$pc){
+    font-size: toRem(14);
+    }
 }
 
 .bold {
@@ -48,9 +50,16 @@ p {
         font-weight: 700;
     }
 
-    @include adaptiveValue("font-size", 16, 14);
+    @media (max-width:$pc){
+        font-size: toRem(14);
+        }
 }
-
+summary{
+    &::marker{
+        content: "";
+        display: none;
+    }
+}
 
 //========================================================================================================================================================
 
@@ -107,7 +116,9 @@ p {
 }
 
 .btn {
-    padding: 25px 60px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 30px 61px;
     display: inline-block;
     background-color: $main;
     color: #fff;

@@ -4,14 +4,17 @@
 	}
 	// .menu__body
 	&__body {
-		@media (max-width: $mobile) {
+		
+		@media (max-width: $tablet) {
 			position: fixed;
 			width: 100%;
 			height: 100%;
 			left: -100%;
-			top: 0;
+			top: 70px;
+			background-color: #fff;
+			color: #000;
 			overflow: auto;
-			padding: toRem(50) toRem(15) toRem(15) toRem(30);
+			padding: toRem(30) toRem(15) toRem(105) toRem(15);
 			transition: left 0.3s;
 			&::before {
 				content: "";
@@ -33,7 +36,7 @@
 	}
 	// .menu__list
 	&__list {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 		}
 	}
 	// .menu__item
@@ -41,19 +44,33 @@
 	}
 	// .menu__link
 	&__link {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 		}
 	}
 }
-
+.menu-open{
+	.menu__icon {
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(1);
+			background-color: #000 !important;
+		}
+	}
+}
 //Burger Icon
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
-		width: toRem(30);
-		height: toRem(18);
+		width: toRem(20);
+		height: toRem(13);
 		z-index: 5;
 		@media (any-hover: none) {
 			cursor: default;
@@ -66,9 +83,11 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: toRem(2);
-			background-color: #000;
+			height: toRem(1);
+			background-color: #fff;
 		}
+		
+		
 		&::before {
 			top: 0;
 		}
@@ -77,6 +96,8 @@
 		}
 		span {
 			top: calc(50% - toRem(1));
+			width: 80%;
+			left: 0;
 		}
 		.menu-open & {
 			span {
