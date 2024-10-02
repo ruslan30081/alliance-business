@@ -550,13 +550,15 @@ summary::marker {
 .main__bg {
   position: absolute;
   z-index: -1;
-  top: 92px;
+  top: 0;
   left: 0;
-  overflow: hidden
+  overflow: hidden;
+  height: 100%
 }
 .main__bg img {
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  height: 100%
 }
 .main__bg::before {
   position: absolute;
@@ -564,7 +566,7 @@ summary::marker {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 92px);
+  height: 100%;
   background-color: rgba(41,45,51,.6)
 }
 .main__title {

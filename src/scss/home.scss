@@ -72,10 +72,10 @@
     &__bg {
         position: absolute;
         z-index: -1;
-        top: 92px;
+        top: 0;
         left: 0;
         overflow: hidden;
-
+        height: 100%;
         @media (max-width:$pc) {
             height: 100%;
             top: 0;
@@ -84,6 +84,7 @@
         img {
 
             object-fit: cover;
+                height: 100%;
 
             @media (max-width:$pc) {
                 height: 100%;
@@ -96,8 +97,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: calc(100% + 92px);
-            ;
+            height: calc(100%);
             background-color: rgba(41, 45, 51, 0.6);
         }
     }

@@ -100,7 +100,7 @@ function initSliders() {
 				768: {
 					slidesPerView: 5,
 					spaceBetween: 0,
-					autoHeight: true,
+					// autoHeight: true,
 					enabled: false,
 
 				},

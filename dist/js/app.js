@@ -7510,7 +7510,6 @@
                     768: {
                         slidesPerView: 5,
                         spaceBetween: 0,
-                        autoHeight: true,
                         enabled: false
                     }
                 },
