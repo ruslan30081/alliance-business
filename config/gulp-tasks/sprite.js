@@ -34,8 +34,8 @@ export const sprite = () => {
 			},
 			svg: {
 				rootAttributes: {
-					style: 'display: none;',
-					'aria-hidden': true
+					// style: 'display: none;',
+					// 'aria-hidden': true
 				},
 				xmlDeclaration: false
 			}

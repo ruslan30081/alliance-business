@@ -7510,7 +7510,8 @@
                     768: {
                         slidesPerView: 5,
                         spaceBetween: 0,
-                        autoHeight: true
+                        autoHeight: true,
+                        enabled: false
                     }
                 },
                 on: {}
@@ -7529,7 +7530,8 @@
                 breakpoints: {
                     300: {
                         slidesPerView: 1.5,
-                        spaceBetween: 30
+                        spaceBetween: 30,
+                        enabled: true
                     },
                     479: {
                         slidesPerView: 2,

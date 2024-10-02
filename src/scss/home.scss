@@ -73,7 +73,7 @@
         position: absolute;
         z-index: -1;
         top: 92px;
-        left: -27px;
+        left: 0;
         overflow: hidden;
 
         @media (max-width:$pc) {
@@ -168,6 +168,8 @@
     // main__slide
 
     &__slide {
+        width: 20%;
+        height: 100%;
 
         @media (max-width:$mobile) {
             height: 100%;
@@ -181,13 +183,13 @@
         padding: 34px 50px 30px 50px;
         max-width: 288px;
         width: 100%;
+        height: 100%;
 
         @media (max-width:$pc) {
             padding: 20px 30px;
         }
 
         @media (max-width:$mobile) {
-            height: 100%;
         }
     }
 
@@ -318,7 +320,7 @@
     &__wrap {
         display: flex;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 37px;
 
         @media (max-width:$mobile) {
             margin-bottom: 10px;

@@ -101,6 +101,8 @@ function initSliders() {
 					slidesPerView: 5,
 					spaceBetween: 0,
 					autoHeight: true,
+					enabled: false,
+
 				},
 
 			},
@@ -151,6 +153,7 @@ function initSliders() {
 				300: {
 					slidesPerView: 1.5,
 					spaceBetween: 30,
+					enabled: true,
 				},
 				479: {
 					slidesPerView: 2,

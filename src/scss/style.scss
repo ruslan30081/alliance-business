@@ -120,6 +120,7 @@ body {
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
 			margin: 0 auto;
+			transform: translateX(toRem(8));
 		}
 		@if ($containerPadding>0) {
 			@if ($maxWidthContainer>0) {
@@ -154,6 +155,11 @@ body {
 			}
 		}
 	}
+}
+@media (max-width:$pc){
+	[class*="__container"] {
+		transform: none;
+	  }
 }
 
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
