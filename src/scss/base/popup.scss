@@ -11,9 +11,11 @@ body::after {
 	pointer-events: none;
 	z-index: 149;
 }
+
 .popup-show body::after {
 	opacity: 1;
 }
+
 .popup {
 	position: fixed;
 	top: 0;
@@ -25,16 +27,19 @@ body::after {
 	visibility: hidden;
 	pointer-events: none;
 }
+
 .popup_show {
 	z-index: 150;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
 }
+
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
 }
+
 .popup__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -46,16 +51,115 @@ body::after {
 	justify-content: center;
 	align-items: center;
 }
+
 .popup__content {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
+	background-color: #fff;
+	padding: 40px 50px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: 460px;
+
 	.lock & {
 		visibility: visible;
 	}
+	@media (max-width:$mobileSmall){
+	padding: 30px;
+		  
+	}
+}
+
+
+
+
+.popup {
+
+	/* .popup__wrapper */
+
+	&__wrapper {}
+
+	/* .popup__content */
+
+	&__content {}
+
+	/* .popup__wrap-text */
+
+	&__wrap-text {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	/* .popup__title */
+
+	&__title {
+		font-size: 48px;
+		font-family: "BebasNeueRegular", sans-serif;
+		font-weight: 400;
+		line-height: 120%;
+		margin-bottom: 20px;
+		
+		@include adaptiveValue("font-size", 48, 40);
+	}
+
+	/* .popup__close */
+
+	&__close {
+		padding: 14px;
+		height: max-content;
+		border: 1px solid $sep;
+		img{
+			width: 18px;
+			height: 18px;
+		}
+	}
+
+	/* .popup__text */
+
+	&__text {}
+
+	/* .popup__descript */
+
+	&__descript {
+		margin-bottom: 20px;
+	}
+
+
+
+	/* .contact__wrap-inp */
+
+	.contact__wrap-inp {
+		flex-direction: column;
+	}
+
+	/* .contact__inp */
+
+	&__inp {}
+
+	/* .contact__input */
+
+	&__input {}
+
+	/* .contact__wrap-btn */
+
+	.contact__wrap-btn {
+		display: flex;
+		flex-direction: column;
+
+		button {
+			width: 100%;
+		}
+	}
+
+	/* .contact__text */
+
+	&__text {}
+
+	/* .contact__icon */
+
+	&__icon {}
+
+	/* .contact__info */
+
+	&__info {}
 }

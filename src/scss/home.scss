@@ -22,6 +22,10 @@
     /* .page__client */
 
     &__client {}
+
+    /* .page__aerosol */
+
+    &__aerosol {}
 }
 
 .svg-m1-dims {
@@ -199,6 +203,11 @@
 
         @media (max-width:$pc) {
             padding: 20px 30px;
+        }
+
+        @media (max-width:$tablet) {
+            padding: 20px 10px;
+
         }
 
         @media (max-width:$mobile) {}
@@ -630,42 +639,48 @@
     margin-top: 150px;
     overflow: hidden;
 
-    @media (max-width:$tablet){
-    margin-top: 130px;
-        
-    }
-    @media (max-width:$mobile){
-    margin-top: 110px;
-          
-    }
-    @media (max-width:$mobileSmall){
-    margin-top: 100px;
-          
+    @media (max-width:$tablet) {
+        margin-top: 130px;
+
     }
 
-    @media (min-width:$tablet){
-        display: flex;
-          flex-direction: row-reverse;
+    @media (max-width:$mobile) {
+        margin-top: 110px;
+
     }
-    @media (max-width:$tablet){
+
+    @media (max-width:$mobileSmall) {
+        margin-top: 100px;
+
+    }
+
+    @media (min-width:$tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @media (max-width:$tablet) {
         display: flex;
         flex-direction: column-reverse;
     }
+
     /* .client__image */
 
     &__image {
-        @media (min-width:$tablet){
-             img{
+        @media (min-width:$tablet) {
+            img {
                 max-width: 100%;
-             } 
-             flex: 0 0 50%;
-             transform: translate(100%, 0);
+            }
+
+            flex: 0 0 50%;
+            transform: translate(100%, 0);
         }
-        @media (max-width:$tablet){
-            img{
+
+        @media (max-width:$tablet) {
+            img {
                 max-width: 100%;
                 margin: 0 auto;
-             } 
+            }
         }
     }
 
@@ -687,16 +702,18 @@
         margin-left: auto;
         width: 50%;
         padding: 50px 0px;
-        @media (max-width: toEm(1700)){
-        padding: 50px 10px;
-              
+
+        @media (max-width: toEm(1700)) {
+            padding: 50px 10px;
+
         }
-        @media (max-width:$tablet){
+
+        @media (max-width:$tablet) {
             padding-top: 72px;
             padding-bottom: 0;
-        width: 100%;
-        margin-left: none;
-            
+            width: 100%;
+            margin-left: none;
+
         }
     }
 
@@ -704,8 +721,9 @@
 
     &__title {
         margin-bottom: 20px;
-        @media (max-width:$mobileSmall){
-             margin-bottom: 10px; 
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 10px;
         }
     }
 
@@ -713,12 +731,552 @@
 
     &__text {
         margin-bottom: 30px;
-        @media (max-width:$mobileSmall){
-             margin-bottom: 20px; 
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 20px;
         }
     }
 
     /* .client__link */
 
     &__link {}
+}
+
+//========================================================================================================================================================
+// БЛОК aerosol
+
+
+.aerosol {
+    margin-top: 182px;
+
+    @media (max-width:$tablet) {
+        margin-top: 150px;
+    }
+
+    @media (max-width:$mobile) {
+        margin-top: 120px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        margin-top: 100px;
+    }
+
+    /* .aerosol__container */
+
+    &__container {}
+
+    /* .aerosol__body */
+
+    &__body {
+        display: flex;
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+        }
+    }
+
+    /* .aerosol__col */
+
+    &__col {
+        &:nth-child(1) {
+            @media (min-width:$tablet) {
+                margin-right: 20px;
+                max-width: 700px;
+            }
+
+        }
+
+        &:nth-child(2) {
+            display: flex;
+            flex-wrap: wrap;
+
+            @media (min-width:$tablet) {
+                max-width: 720px;
+
+            }
+
+
+        }
+
+    }
+
+    /* .aerosol__title */
+
+    &__title {
+        margin-bottom: 38px;
+
+        @media (max-width:$mobileSmall) {
+            margin-bottom: 30px;
+        }
+    }
+
+    /* .aerosol__wrap-items */
+
+    &__wrap-items {
+        display: flex;
+
+        @media (max-width:$tablet) {
+            justify-content: center;
+            margin-bottom: 34px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            flex-direction: column;
+        }
+    }
+
+    /* .aerosol__col-items */
+
+    &__col-items {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            &:not(:last-child) {
+                margin-right: 0px;
+
+                margin-bottom: 15px;
+            }
+        }
+
+    }
+
+    /* .aerosol__item */
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+        }
+    }
+
+    /* .aerosol__svg */
+
+    &__svg {
+        margin-right: 20px;
+    }
+
+    /* .aerosol__desctipt */
+
+    &__desctipt {}
+
+    /* .aerosol__brand */
+
+    &__brand {
+        width: 33.333%;
+        border: 1px solid $sep;
+        padding: 45px 10px;
+        text-align: center;
+
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    filter: grayscale(0);
+                }
+            }
+        }
+
+        @media (max-width:$mobile) {
+            padding: 35px 10px;
+
+        }
+
+        @media (max-width:$mobileSmall) {
+            width: 50%;
+            padding: 30px 10px;
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    /* .aerosol__image */
+
+    &__image {
+        img {
+            @extend %grayfilter;
+        }
+    }
+}
+
+//========================================================================================================================================================
+// блок БЛОГ
+
+.page {
+
+    /* .page__blog */
+
+    &__blog {}
+}
+
+.blog {
+
+    /* .blog__container */
+
+    &__container {}
+
+    /* .blog__title */
+
+    &__title {
+        margin-top: 182px;
+        margin-bottom: 50px;
+
+        @media (max-width:$tablet) {
+            margin-top: 150px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width:$mobile) {
+            margin-top: 120px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+    }
+
+    /* .blog__body */
+
+    &__body {}
+
+    /* .blog__slider */
+
+    &__slider {}
+
+    /* .blog__wrapper */
+
+    &__wrapper {}
+
+    /* .blog__slide */
+
+    &__slide {}
+
+    /* .blog__item */
+
+    &__item {
+        position: relative;
+        color: #fff;
+    }
+
+    /* .blog__image */
+
+    &__image {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(41, 45, 51, 0.6);
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .blog__wrap-text
+    &__wrap-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @media (max-width:$tablet) {
+            padding: 30px;
+
+            p {
+                display: none;
+            }
+
+        }
+
+        @media (max-width:$mobileSmall) {
+            padding: 20px;
+        }
+    }
+
+
+    /* .blog__item-title */
+
+    &__item-title {
+        margin-bottom: 10px;
+    }
+
+    /* .blog__descript */
+
+    &__descript {}
+
+    /* .blog__wrap-navig */
+
+    &__wrap-navig {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 30px;
+
+        @media (max-width:$mobileSmall) {
+            margin-top: 20px;
+        }
+    }
+
+    /* .blog__link */
+
+    &__link {}
+
+    /* .blog__wrap-arrows */
+
+    &__wrap-arrows {
+        .step__wrap-arrows {
+            margin-top: 0;
+        }
+    }
+}
+
+//========================================================================================================================================================
+// форма
+
+.page {
+
+    /* .page__contact */
+
+    &__contact {}
+}
+
+.contact {
+    margin-top: 224px;
+    background-color: $bg2;
+    overflow: visible;
+
+    @media (min-width:$tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @media (max-width:$tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* .contact__container */
+
+    &__container {}
+
+    // contact__content
+    &__content {
+        flex: 0 0 100%;
+    }
+
+    /* .contact__body */
+
+    &__body {
+        display: flex;
+        width: 60%;
+        margin-left: auto;
+        max-width: 840px;
+        padding: 100px 0;
+        @media (max-width:$tablet){
+            width: 100%;
+        padding: 70px 0;
+
+        }
+        @media (max-width:$mobile){
+        padding: 60px 0;
+              
+        }
+        @media (max-width:$mobileSmall){
+        padding: 50px 0;
+              
+        }
+    }
+
+    /* .contact__image */
+
+    &__image {
+        margin-top: -74px;
+        pointer-events: none;
+
+        @media (min-width:$tablet) {
+            img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            flex: 0 0 40%;
+            transform: translate(100%, 0);
+        }
+
+        @media (max-width: toEm(1610)) {
+            flex: 0 0 50%;
+            transform: translate(70%, 0);
+
+        }
+        @media (max-width: toEm(1280)){
+            flex: 0 0 100%;
+            transform: translate(60%, 0);
+        }
+
+        @media (max-width:$tablet) {
+            display: none;
+            img {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    /* .contact__form */
+
+    &__form {}
+
+    /* .contact__title */
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    /* .contact__descript */
+
+    &__descript {
+        margin-bottom: 42px;
+        color: $txt2;
+    }
+
+    // contact__wrap-inp
+    &__wrap-inp {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+        @media (max-width:$mobile){
+            gap: 10px;
+        }
+        @media (max-width:$mobileSmall){
+             flex-direction: column; 
+            gap: 20px;
+            margin-bottom: 10px;
+
+        }
+    }
+
+    // contact__inp
+    &__inp {
+        position: relative;
+        width: 100%;
+
+        &::before {
+            opacity: 0;
+            position: absolute;
+            width: fit-content;
+            padding: 0 10px;
+            background-color: $bg2;
+            top: 0px;
+            left: 20px;
+            transition: all 0.3s;
+        }
+
+        &:nth-child(1) {
+            &::before {
+                content: 'Имя';
+
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                content: 'Номер телефона';
+
+            }
+        }
+
+            
+       
+        @media (any-hover: hover){
+            &:hover{
+                &::before {
+                    opacity: 1;
+                    top: -6px;
+                }
+            }
+        }
+    }
+
+    /* .contact__input */
+
+    &__input {
+        padding: 20px 30px;
+        border: 1px solid $sep2;
+        transition: all 0.3s ease;
+        color: $txt2;
+
+        @media (any-hover: hover) {
+            &:hover {
+                border: 1px solid $main;
+            }
+        }
+
+        &:focus {
+            border: 1px solid $main;
+        }
+    }
+
+    /* .contact__wrap-btn */
+
+    &__wrap-btn {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        button {
+            white-space: nowrap;
+        }
+        
+        @media (max-width:$mobile){
+
+            button {
+             width: 100%;
+                white-space: nowrap;
+            }
+             flex-direction: column; 
+        }
+    }
+
+    /* .contact__text */
+
+    &__text {
+        display: flex;
+        color: $txt2;
+    }
+
+    /* .contact__icon */
+
+    &__icon {
+        margin-top: 3px;
+        margin-right: 11px;
+    }
+
+    /* .contact__info */
+
+    &__info {}
 }

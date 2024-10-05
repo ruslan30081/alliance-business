@@ -30,9 +30,9 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	//Список слайдеров
 	//Проверяем, есть ли слайдер на странице
-	if (document.querySelector('.swiper')) { //Указываем класс нужного слайдера
+	if (document.querySelector('.page__main .swiper')) { //Указываем класс нужного слайдера
 		//Создаем слайдер
-		new Swiper('.swiper', { //Указываем класс нужного слайдера
+		new Swiper('.page__main .swiper', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
 			modules: [Navigation],
@@ -162,6 +162,84 @@ function initSliders() {
 				768: {
 					spaceBetween: 30,
 					enabled: false,
+				},
+
+			},
+
+			// События
+			on: {
+
+			}
+		});
+	}
+	if (document.querySelector('.swiper-blog ')) { //Указываем класс нужного слайдера
+		//Создаем слайдер
+		new Swiper('.swiper-blog ', { //Указываем класс нужного слайдера
+			//Подключаем модули слайдера
+			//для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			//autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.blog-prev',
+				nextEl: '.blog-next',
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				300: {
+					slidesPerView: 1,
+					spaceBetween: 30,
+					autoHeight: true,
+				},
+				479: {
+					slidesPerView: 1,
+					spaceBetween: 30,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+			loop: true,
+			// autoHeight: true,
+
 				},
 
 			},

@@ -262,7 +262,7 @@
             display: block;
             position: absolute;
             right: 0;
-            bottom: -3px;
+            bottom: 0;
             width: 0;
             height: 2px;
             /* Высота линии */
@@ -280,7 +280,7 @@
                     display: block;
                     position: absolute;
                     left: 0;
-                    bottom: -3px;
+                    bottom: 0;
                     height: 2px; /* Высота линии */
                     background-color: $main; /* Цвет подчеркивания при появлении линии*/
                     transition: width 0.5s;  /* Время эффекта */
@@ -450,6 +450,37 @@
             transform: rotate(90deg);
         }
     }
-}
+} 
+.reverse{
+    background-color: #fff;
+    color: #000;
+    .header__btn{
+        color: #fff;
+    }
+    &._header-scroll {
+        background-color: #fff;
+        color: #000;
+        top: 0;
+        animation: scroll .7s ease-in-out 0s 1 normal;
+        border-bottom: none;
 
-.icon-menu {}
+        .menu__icon {
+
+            span,
+            &::before,
+            &::after {
+                background-color: #000 !important;
+            }
+        }
+
+        .header__logo {}
+
+        .header__btn {
+            color: #fff;
+        }
+
+        .header__logo-path {
+            fill: $txt1;
+        }
+    }
+}

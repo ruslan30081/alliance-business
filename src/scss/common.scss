@@ -89,6 +89,7 @@ summary{
     align-items: center;
     font-weight: 600;
     color: $main;
+    cursor: pointer;
 
     font-size: toRem(16);
     @include adaptiveValue("font-size",16 ,14 );

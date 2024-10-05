@@ -1,18 +1,22 @@
-<header data-scroll="120" class="header ">
+<header data-scroll="120" class="header @@reverse ">
 
 	<div class="header__menu menu">
 		<button type="button" class="menu__icon icon-menu"><span></span></button>
 		<div class="header__col">
 			<a href="./" class="header__logo">
+
 				<svg class="svg-logo-light-dims">
 					<use xlink:href="@img/icons/icons.svg#logo-light"></use>
 				</svg>
+				@@if (name === 'test') {
+				  }
+				
 
 			</a>
 			<span class="menu__line sep_opacity"></span>
 			<nav class="menu__body">
 				<ul class="menu__list text_p">
-					<li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
+					<li class="menu__item"><a href="about.html" class="menu__link">О компании</a></li>
 					<li class="menu__item">
 						<div class="menu__spol-wrap">
 							<div data-spollers="992,max" class="spollers">
