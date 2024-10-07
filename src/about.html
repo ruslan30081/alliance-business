@@ -177,9 +177,107 @@
 		</symbol>
 	</svg>
 	<div class="wrapper ">
-		@@include('html/_header.htm',{"reverse":"reverse"})
-		<main class="page">
-			
+		@@include('html/_header.htm',{"reverse":"reverse","logo":"logo-1"})
+		<main class="page mtheader">
+			@@include('html/_breadcrumps.htm',{"h1":"О компании","bg":"bg"  })
+
+			<section class="page__first first ">
+				<div class="first__container">
+					<div class="first__body">
+						<div class="first__img">
+							<img src="@img/page_about/first.png" alt="Image">
+						</div>
+						<div class="first__body-text">
+							<h2 class="first__title sub-line-title">мы - эксперты в области <br> производства химии</h2>
+							<p class="first__descript">Разнообразный и богатый опыт говорит нам, что перспективное
+								планирование однозначно фиксирует необходимость поставленных обществом задач! Есть над
+								чем задуматься: ключевые особенности структуры проекта могут быть объединены в целые
+								кластеры себе подобных. Интерактивные прототипы, которые представляют собой яркий пример
+								континентально-европейского типа политической культуры, будут описаны максимально
+								подробно. Значимость этих проблем настолько очевидна, что перспективное планирование
+								играет важную роль в формировании системы массового участия.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__main main ">
+				<div class="main__container">
+					<div class="main__wrap">
+						<div class="main__slider swiper">
+							<!-- Движущаяся часть слайдера -->
+							<div class="main__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="main__slide swiper-slide">
+									<div class="main__item">
+										<div class="main__icon">
+											<svg class="svg-m1-dims">
+												<use xlink:href="@img/icons/icons.svg#m1"></use>
+											</svg>
+										</div>
+										<p class="main__text">Непрерывная работа <br> c 2017 года</p>
+									</div>
+								</div>
+								<div class="main__slide swiper-slide">
+									<div class="main__item">
+										<div class="main__icon">
+											<svg class="svg-m2-dims">
+												<use xlink:href="@img/icons/icons.svg#m2"></use>
+											</svg>
+										</div>
+										<p class="main__text">Вся продукция сертифицирована</p>
+									</div>
+								</div>
+								<div class="main__slide swiper-slide">
+									<div class="main__item">
+										<div class="main__icon">
+											<svg class="svg-m3-dims">
+												<use xlink:href="@img/icons/icons.svg#m3"></use>
+											</svg>
+										</div>
+										<p class="main__text">Контроль качества <br> на всех этапах</p>
+									</div>
+								</div>
+								<div class="main__slide swiper-slide">
+									<div class="main__item">
+										<div class="main__icon">
+											<svg class="svg-m4-dims">
+												<use xlink:href="@img/icons/icons.svg#m4"></use>
+											</svg>
+										</div>
+										<p class="main__text">Возможны поставки <br> по всей России</p>
+									</div>
+								</div>
+								<div class="main__slide swiper-slide">
+									<div class="main__item">
+										<div class="main__icon">
+											<svg class="svg-m5-dims">
+												<use xlink:href="@img/icons/icons.svg#m5"></use>
+											</svg>
+										</div>
+										<p class="main__text">Оперативное производство</p>
+									</div>
+								</div>
+							</div>
+	
+							<!-- Если требуется навигация (слева / справа) -->
+							<div class="main__wrap-arrows">
+								<button type="button" class="swiper-button-prev">
+									<img src="@img/icons/about/Vector.svg" alt="Image">
+								</button>
+								<button type="button" class="swiper-button-next">
+									<img src="@img/icons/about/Vector-1.svg" alt="Image">
+								</button>
+							</div>
+	
+	
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+
+			@@include('html/_cta.htm',{})
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

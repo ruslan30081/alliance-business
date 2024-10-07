@@ -87,12 +87,19 @@ export function pageNavigation() {
 // Работа с шапкой при скроле
 export function headerScroll() {
 	function changeLogoPath() {
-		const svgLogo = document.querySelector('.svg-logo-light-dims use');
-		svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-1');
+		const header = document.querySelector('header.header');
+		if (!header.classList.contains('reverse')) {
+		  const svgLogo = document.querySelector('.svg-logo-light-dims use');
+		  svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-1');
+		}
 	  }
+	  
 	  function changeLogoPathBack() {
-		const svgLogo = document.querySelector('.svg-logo-light-dims use');
-		svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-light');
+		const header = document.querySelector('header.header');
+		if (!header.classList.contains('reverse')) {
+		  const svgLogo = document.querySelector('.svg-logo-light-dims use');
+		  svgLogo.setAttribute('xlink:href', 'img/icons/icons.svg#logo-light');
+		}
 	  }
 
 	addWindowScrollEvent = true;

@@ -12,7 +12,7 @@ export const sprite = () => {
 			mode: {
 				symbol: {
 					sprite: '../img/icons/icons.svg',
-					example: true
+					// example: true
 				}
 			},
 			shape: {

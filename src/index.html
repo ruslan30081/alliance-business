@@ -177,7 +177,7 @@
 		</symbol>
 	</svg>
 	<div class="wrapper ">
-		@@include('html/_header.htm',{"reverse":""})
+		@@include('html/_header.htm',{"reverse":"","logo":"logo-light"})
 		<main class="page">
 			<section class="page__main main">
 				<div class="main__bg">
@@ -193,6 +193,7 @@
 						зависит от анализа существующих паттернов поведения.</p>
 					<div class="main__btn btn bold">Подробнее о компании</div>
 					<!-- Оболочка слайдера -->
+
 
 					<div class="main__wrap">
 						<div class="main__slider swiper">
@@ -799,49 +800,8 @@
 
 				</div>
 			</section>
-			<section class="page__contact  contact">
+			@@include('html/_cta.htm',{})
 
-				<div class=" contact__content">
-					<div class="contact__container">
-						<div class=" contact__body">
-
-							<div class="contact__form">
-								<h2 class="contact__title">Хотите сотрудничать?</h2>
-								<p class="contact__descript">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее
-									время ответит на все интересующие вопросы и поможем даже в самых сложных случаях!
-								</p>
-								<form data-ajax action="files/sendmail/sendmail.php" method="POST">
-									<div class="contact__wrap-inp">
-										<div class="contact__inp">
-											<input type="text" name="form[name]" data-error="Error" placeholder="Имя" class="contact__input input">
-										</div>
-										<div class="contact__inp">
-											<input type="text" name="form[phone]" data-error="Error" placeholder="+7 (___) __-__-___" class="contact__input input input_phone">
-										</div>
-									</div>
-
-									<div class="contact__wrap-btn">
-										<button type="submit" class="button btn">Отправить заявку</button>
-										<div class="contact__text">
-											<div class="contact__icon">
-												<img src="@img/icons/protect.svg" alt="Image">
-											</div>
-											<p class="contact__info">Обращаясь к нам вы получаете не только
-												профессиональную работу, но и абсолютную конфиденциальность информации!
-											</p>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="contact__image">
-					<img src="@img/page_main/balon.png" alt="Balon">
-				</div>
-
-
-			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
